@@ -27,6 +27,8 @@ const Home = () => {
           </TouchableOpacity>
         </View>
 
+
+
         <View style={styles.flexWarp}>
           {/* <EventCard /> */}
 
@@ -63,6 +65,20 @@ const Home = () => {
 
 
         </View>
+        <View style = {styles.container}  >
+          <Text style ={styles.title}>My tasks</Text>
+
+          <ScrollView horizontal style = {styles.tagContainer}>
+            
+          <Text style={styles.activeTag}>All</Text>
+          <Text style={styles.tag}>Urgent</Text>
+          <Text style={styles.tag}>Work</Text>
+          <Text style={styles.tag}>Class</Text>
+          <Text style={styles.tag}>Famly</Text>
+          <Text style={styles.tag}>Weekend</Text>
+          <Text style={styles.tag}>Hobbies</Text>
+          </ScrollView>
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
@@ -89,6 +105,9 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: '#666',
     fontWeight: '700',
+  },
+  container: {
+    paddingVertical: 30,
   },
   title: {
     paddingLeft: 20,
@@ -157,6 +176,26 @@ const styles = StyleSheet.create({
   flexWarp: {
     flexDirection: "row",
     flexWrap: "wrap",
+  },
+
+
+
+
+  // my tasks
+  tagContainer: {
+    margin: 20,
+    width: "95%",
+    flex:1,
+  },
+  tag:{
+    padding: 10,
+    fontSize: 18
+  },
+  activeTag: {
+    padding: 10,
+    fontSize: 18,
+    fontWeight: "700",
+    color: "#3a0ca3",
   },
 
 
